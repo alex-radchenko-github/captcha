@@ -8,17 +8,20 @@ import ButtonNext from "./ButtonNext";
 
 const Captcha = observer(() => {
 
-    return (
+        return (
             <React.Fragment>
                 <CssBaseline/>
                 <Container maxWidth="xs">
-                    <div style={{display: 'flex', justifyContent: 'center', margin: "10px"}}> Select all identical pictures </div>
+                    <div style={{display: 'flex', justifyContent: 'center', margin: "10px"}}> Select all identical
+                        pictures
+                    </div>
                     <Grid container spacing={2}>
                         {CaptchaS.icons.map((number) =>
-                            <Grid item xs={4} key={number.id} style={{display: 'flex', justifyContent: 'center', padding: "10px"}}>
+                            <Grid item xs={4} key={number.id}
+                                  style={{display: 'flex', justifyContent: 'center', padding: "10px"}}>
 
                                 <ToggleButton
-                                    value="check"
+                                    value="select"
                                     selected={CaptchaS.returnButtonStatus(number)}
                                     onChange={() => CaptchaS.reverseButton(number)}
                                 >
@@ -26,7 +29,6 @@ const Captcha = observer(() => {
                                 </ToggleButton>
                             </Grid>
                         )}
-
                     </Grid>
                     <ButtonNext/>
                 </Container>
